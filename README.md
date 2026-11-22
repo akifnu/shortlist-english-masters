@@ -1,24 +1,71 @@
 # Shortlist English-Taught Masters
 
-An Agent Skill for finding fully English-taught master's programs an applicant qualifies for. It checks official admissions rules against the applicant's degree, grades, and transcript, then produces an Excel shortlist with source citations.
+Find fully English-taught master's programs you qualify for. The workflow checks your transcript against official admissions rules, including course prerequisites and minimum credits, and turns verified matches into a cited Excel workbook.
 
-## Install
+## Choose your setup
 
-Download [shortlist-english-masters.zip](shortlist-english-masters.zip) from this repository.
+| Where you use it | Start here |
+| --- | --- |
+| **Free ChatGPT** or regular ChatGPT chat | [Open or save the starter prompt (.txt)][starter]. Paste it into a new chat. |
+| **ChatGPT Work** with skill uploads enabled | [Download the installable skill (.zip)][skill]. Import it under **Plugins → Skills**. |
+| **Claude** | [Download the installable skill (.zip)][skill]. Import it under **Customize → Skills**. |
 
-- **ChatGPT**. Open **Plugins → Skills → Create → Upload from your computer** and upload the ZIP. [OpenAI's installation guide](https://help.openai.com/en/articles/20001066-skills-in-chatgpt)
-- **Claude**. Enable **Code execution and file creation** and web search. Open **Customize → Skills → + → Create skill → Upload a skill** and upload the ZIP. [Anthropic's installation guide](https://support.claude.com/en/articles/12512180-use-skills-in-claude)
-- **Codex or Claude Code**. Install the [skill folder](shortlist-english-masters/) using the client's local skill directory. The workflow needs web access and the ability to create files. The bundled Excel exporter uses Python 3 and openpyxl.
+### Free ChatGPT
 
-## Try it
+1. [Open the starter prompt][starter], copy its text, and paste it into a new ChatGPT chat. You can also save the text file and attach it with the message “Follow the attached instructions and start by asking me for my profile.”
+2. Answer the questions about your bachelor's degree, grades and credits, desired semester and year, fields, countries, tuition budget, and English-language proof. Paste a list of courses and credits or attach a redacted transcript.
+3. Ask ChatGPT to browse the universities' official sites and return a downloadable **Excel (.xlsx)** file. Start with a specific country and intake so the search is manageable.
+4. If you run into a usage limit, save the latest checkpoint. Paste it along with the starter into a new chat to resume when the required tools are available. If file creation is unavailable, ask for separate copyable tables to put into an Excel workbook.
 
-> Use Shortlist English-Taught Masters to find fully English-taught data science master's programs in Germany for winter 2027/28. My tuition limit is €1,500 per semester. Ask me what you need from my transcript before checking eligibility.
+Web search, uploads, and data analysis are available on Free with usage limits. The starter runs as instructions in a regular chat. [ChatGPT Free Tier FAQ][free-help]
 
-Share a redacted transcript or a list of completed modules and credits for programs with subject-credit requirements. The workbook includes verified matches, deadlines, application portals, fees, a 150-word explanation of academic fit for each program, and citations to the governing rules. The skill checkpoints research to disk so it can resume from the last recorded source.
+### ChatGPT Work
 
-## Source
+1. [Download the skill ZIP][skill] and keep it zipped.
+2. In ChatGPT, open **Plugins → Skills**, select **Create → Upload from your computer**, and select the ZIP.
+3. Open a new Work chat and use the example request below. Ask for a downloadable **Excel (.xlsx)** workbook and attach a redacted transcript or paste your modules and credits.
+
+Skill uploads depend on your plan and workspace settings. If the upload option is unavailable, paste the [starter prompt][starter] into Work and use the same request. [ChatGPT Skills guide][skills-help] · [Creating spreadsheets in Work][work-help]
+
+### Claude
+
+1. [Download the skill ZIP][skill] and keep it zipped.
+2. In Claude, enable **Code execution and file creation** and turn on **Web search**.
+3. Go to **Customize → Skills**, select **+ → Create skill → Upload a skill**, and upload the ZIP.
+4. Start a new chat, ask Claude to use **Shortlist English-Taught Masters**, and provide your academic profile when prompted. Ask for a downloadable **Excel (.xlsx)** workbook.
+
+If custom skill uploads are unavailable in your workspace, paste the [starter prompt][starter] into a Claude chat. [Claude Skills guide][claude-help] · [Claude web search guide][claude-search]
+
+## Example request
+
+> Use Shortlist English-Taught Masters to find fully English-taught data science master's programs in Germany for winter 2027/28. My tuition cap is €1,500 per semester, excluding semester contributions. Ask for my grades, modules, credits, and English proof before deciding eligibility. Browse official university sources and give me a downloadable Excel workbook.
+
+Share course names, credits, grades and, when needed, module descriptions. Remove your name, student number, address, and document identifiers from any transcript you share.
+
+## What the workbook includes
+
+| Tab | Contents |
+| --- | --- |
+| **Shortlist** | Verified eligible programs, official program and application links, intake, application window and deadline, tuition and mandatory fees, and a 150-word explanation of academic fit per program. |
+| **Admissions Evidence** | Individual requirements and the applicant's evidence for each, with links and page or section citations. |
+| **Documents Reviewed** | The official ordinances, appendices, application guides, and fee sources used for the shortlisted programs. |
+| **Search Summary** | The search scope, date, coverage limits, and counts. Excluded and unverified programs appear only in the counts. |
+
+The installed skill saves progress after reviewing each source. If the chat or session must end, retain the latest checkpoint so you can resume without repeating completed reviews.
+
+## Source files
 
 - [Skill instructions](shortlist-english-masters/SKILL.md)
 - [Admissions review guide](shortlist-english-masters/references/admissions-review.md)
 - [Checkpoint and workbook format](shortlist-english-masters/references/run-and-workbook.md)
 - [Excel exporter](shortlist-english-masters/scripts/shortlist.py)
+
+Codex and Claude Code users can install the [skill folder](shortlist-english-masters/) in their client's local skill directory. The workflow uses web access and file creation. The bundled exporter requires Python 3 and openpyxl.
+
+[starter]: https://raw.githubusercontent.com/akifnu/shortlist-english-masters/main/chatgpt-free-starter.txt
+[skill]: https://raw.githubusercontent.com/akifnu/shortlist-english-masters/main/shortlist-english-masters.zip
+[free-help]: https://help.openai.com/en/articles/9275245-chatgpt-free-tier-faq
+[skills-help]: https://help.openai.com/en/articles/20001066-skills-in-chatgpt
+[work-help]: https://help.openai.com/en/articles/20001278-creating-and-editing-documents-spreadsheets-and-presentations-with-chatgpt-work
+[claude-help]: https://support.claude.com/en/articles/12512180-use-skills-in-claude
+[claude-search]: https://support.claude.com/en/articles/10684626-enable-and-use-web-search
