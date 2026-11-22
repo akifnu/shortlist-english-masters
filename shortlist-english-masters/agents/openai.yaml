@@ -1,0 +1,14 @@
+interface:
+  display_name: Shortlist English-Taught Masters
+  short_description: Verify master’s eligibility and build an Excel shortlist
+  default_prompt: Use $shortlist-english-masters to find fully English-taught master’s
+    programs I qualify for and make an Excel shortlist.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
