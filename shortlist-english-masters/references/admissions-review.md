@@ -3,7 +3,7 @@
 ## Scope and discovery
 
 - Normalize the academic year and intake to the university's official name. Treat winter, fall, spring and summer start months as institution-specific. Default to application routes that are open, forthcoming, or rolling at the research date. Include a closed round only when the user expressly wants it.
-- For a broad search, start with official national or regional catalogs if available and cover the agreed regions and degree fields with university catalogs and targeted web queries. Search using degree synonyms, relevant specializations, and local names. Finish a bounded program list in full. For an open search, cover the agreed regions and fields, run a second discovery pass through a different route, and document sources and limits. Describe coverage as a search of defined sources, with any material blind spots.
+- Use the bundled German public-institution directory as the discovery queue. Check candidates against the current public ownership and admissions information when a merger, provider change, or joint degree makes the status unclear. Search using English and German degree synonyms, relevant specializations, and local names. Finish a bounded program list in full. For an open search, check the German states and fields in scope, run a second discovery pass, and document institutions assessed, catalogs searched and material coverage limits.
 - Keep country, study location, delivery mode, starting term, and track distinct where these change the curriculum, application, fees, or rules. Merge duplicate listings of the same offering.
 
 ## Official documents

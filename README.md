@@ -1,6 +1,6 @@
-# Shortlist English-Taught Masters
+# Shortlist English-Taught Masters in Germany
 
-Find fully English-taught master's programs you qualify for. The workflow checks your transcript against official admissions rules, including course prerequisites and minimum credits, and turns verified matches into a cited Excel workbook.
+Find fully English-taught master's programs you qualify for at public higher education institutions in Germany. The workflow checks your transcript against official admissions rules, including course prerequisites and minimum credits, and turns verified matches into a cited Excel workbook.
 
 ## Choose your setup
 
@@ -13,8 +13,8 @@ Find fully English-taught master's programs you qualify for. The workflow checks
 ### Free ChatGPT
 
 1. [Open the starter prompt][starter], copy its text, and paste it into a new ChatGPT chat. You can also save the text file and attach it with the message “Follow the attached instructions and start by asking me for my profile.”
-2. Answer the questions about your bachelor's degree, grades and credits, desired semester and year, fields, countries, tuition budget, and English-language proof. Paste a list of courses and credits or attach a redacted transcript.
-3. Ask ChatGPT to browse the universities' official sites and return a downloadable **Excel (.xlsx)** file. Start with a specific country and intake so the search is manageable.
+2. Answer the questions about your bachelor's degree, grades and credits, desired semester and year, fields, any preferred German states or cities, tuition budget, and English-language proof. Paste a list of courses and credits or attach a redacted transcript.
+3. Ask ChatGPT to browse the universities' official sites and return a downloadable **Excel (.xlsx)** file. Choose a specific field and intake. Add a German state or city if you want to narrow the search.
 4. If you run into a usage limit, save the latest checkpoint. Paste it along with the starter into a new chat to resume when the required tools are available. If file creation is unavailable, ask for separate copyable tables to put into an Excel workbook.
 
 Web search, uploads, and data analysis are available on Free with usage limits. The starter runs as instructions in a regular chat. [ChatGPT Free Tier FAQ][free-help]
@@ -32,13 +32,19 @@ Skill uploads depend on your plan and workspace settings. If the upload option i
 1. [Download the skill ZIP][skill] and keep it zipped.
 2. In Claude, enable **Code execution and file creation** and turn on **Web search**.
 3. Go to **Customize → Skills**, select **+ → Create skill → Upload a skill**, and upload the ZIP.
-4. Start a new chat, ask Claude to use **Shortlist English-Taught Masters**, and provide your academic profile when prompted. Ask for a downloadable **Excel (.xlsx)** workbook.
+4. Start a new chat, ask Claude to use **Shortlist English-Taught Masters in Germany**, and provide your academic profile when prompted. Ask for a downloadable **Excel (.xlsx)** workbook.
 
 If custom skill uploads are unavailable in your workspace, paste the [starter prompt][starter] into a Claude chat. [Claude Skills guide][claude-help] · [Claude web search guide][claude-search]
 
+## German public university directory
+
+[Download the directory of 273 public institutions (.csv)][directory] or [view it on GitHub](shortlist-english-masters/assets/german-public-universities.csv). The directory covers all 16 states and includes the official website and institution type for each entry. It includes universities of applied sciences, art and music schools, and specialist public institutions alongside traditional universities.
+
+The ZIP includes the directory and reads it in small batches. For a regular chat, the starter links to the CSV. Attach it if the chat cannot open the link. The directory is a starting point for finding programs. Each shortlisted program still requires current admissions, teaching language, fee, and application checks. [Directory sources and coverage](shortlist-english-masters/references/german-university-directory.md)
+
 ## Example request
 
-> Use Shortlist English-Taught Masters to find fully English-taught data science master's programs in Germany for winter 2027/28. My tuition cap is €1,500 per semester, excluding semester contributions. Ask for my grades, modules, credits, and English proof before deciding eligibility. Browse official university sources and give me a downloadable Excel workbook.
+> Use Shortlist English-Taught Masters to find fully English-taught data science master's programs at public universities in Germany for winter 2027/28. My tuition cap is €1,500 per semester, excluding semester contributions. Ask for my grades, modules, credits, and English proof before deciding eligibility. Browse official university sources and give me a downloadable Excel workbook.
 
 Share course names, credits, grades and, when needed, module descriptions. Remove your name, student number, address, and document identifiers from any transcript you share.
 
@@ -62,6 +68,7 @@ The installed skill saves progress after reviewing each source. If the chat or s
 
 Codex and Claude Code users can install the [skill folder](shortlist-english-masters/) in their client's local skill directory. The workflow uses web access and file creation. The bundled exporter requires Python 3 and openpyxl.
 
+[directory]: https://raw.githubusercontent.com/akifnu/shortlist-english-masters/main/shortlist-english-masters/assets/german-public-universities.csv
 [starter]: https://raw.githubusercontent.com/akifnu/shortlist-english-masters/main/chatgpt-free-starter.txt
 [skill]: https://raw.githubusercontent.com/akifnu/shortlist-english-masters/main/shortlist-english-masters.zip
 [free-help]: https://help.openai.com/en/articles/9275245-chatgpt-free-tier-faq

@@ -96,6 +96,8 @@ def read_programs(directory):
 
 def validate_program(record, allow_closed):
     required_text(record, [key for key, _, _ in PROGRAM_COLUMNS if key != "extra_application_url"])
+    if record["country"].strip().casefold() != "germany":
+        raise ValueError("country: the shortlist covers Germany")
     for key in ("program_url", "application_url", "admissions_url"):
         check_url(record, key)
     if record.get("extra_application_url") is not None:

@@ -4,7 +4,7 @@
 
 Create a private run directory with an initially empty `programs/` subdirectory. Use `run.json` for export settings, a small `profile.md` for relevant normalized academic evidence, `discovery.md` for search sources and the next discovery action, and `programs/<id>.json` for each candidate. Use stable slugs and one record per distinct offering. Create candidate records at discovery with status `pending`. Edit one candidate at a time by writing a temporary file next to it, then atomically replacing the JSON file. After each source, record its citation, applicable sections reviewed, extracted rules and next action in that candidate record. Keep findings in compact paraphrases. Use the same pattern for `run.json` and discovery cursor updates.
 
-After context compaction or interruption, reopen the skill, `profile.md`, `run.json` and the tail or cursor of `discovery.md`. Run the status command to see a small batch of pending candidates, then read one record at a time. Resume from its next action and the first unread section. Keep batches to roughly 5–10 discovery leads and 1–3 PDF pages per read when needed. These are working sizes. Continue until all required sections and the defined search scope are covered. Avoid replaying completed browsing output.
+After context compaction or interruption, reopen the skill, `profile.md`, `run.json` and the tail or cursor of `discovery.md`. Resume institution discovery from the saved directory snapshot, state filter and next offset. Run the status command to see a small batch of pending candidates, then read one record at a time. Resume from its next action and the first unread section. Keep batches to roughly 5–10 discovery leads and 1–3 PDF pages per read when needed. These are working sizes. Continue until all required sections and the defined search scope are covered. Avoid replaying completed browsing output.
 
 Keep the run in the workspace while tools can continue. If a session boundary prevents continuation and the files will disappear, make a private resumable bundle of the compact run files, including only the minimum academic facts needed. Share it with the applicant when resumption requires it. Ask for any redacted original attachments again if they are needed. Update or revalidate decisions when the profile or intake changes.
 
@@ -14,7 +14,7 @@ Set `complete` to true when the defined search is finished and every candidate h
 
 ```json
 {
-  "scope": "Germany, English-taught MSc in data science, winter 2027/28, tuition cap EUR 1,500 per semester",
+  "scope": "Public institutions in Germany, English-taught MSc in data science, winter 2027/28, tuition cap EUR 1,500 per semester",
   "coverage": "Regions, catalogs and official search paths checked, with scope limits",
   "checked_on": "2026-11-22",
   "complete": false,
@@ -26,7 +26,7 @@ A pending candidate needs `status`, `university`, and `program`. Add `program_ur
 
 | Qualified record key | Value |
 | --- | --- |
-| `status`, `university`, `program`, `country`, `city` | Use `qualified` and official program identity and campus |
+| `status`, `university`, `program`, `country`, `city` | Use `qualified`, official program identity and campus, and `Germany` for country |
 | `intake`, `application_status` | Official semester and year, with `open`, `forthcoming`, `rolling` or `closed` |
 | `application_window`, `deadline` | Applicant-specific opening/window and final deadline or explicit official rolling policy, including any different steps in notes |
 | `program_url`, `application_url`, `admissions_url` | Official program page, responsible portal or application entry, and controlling admissions source URL |

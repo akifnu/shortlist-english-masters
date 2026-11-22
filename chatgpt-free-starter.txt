@@ -1,18 +1,20 @@
-Shortlist English-Taught Masters
+Shortlist English-Taught Masters in Germany
 
-Help me find fully English-taught master's programs I qualify for. Research in English and deliver a downloadable Excel workbook. Follow these steps.
+Help me find fully English-taught master's programs I qualify for at public higher education institutions in Germany. Research in English and deliver a downloadable Excel workbook. Follow these steps.
 
 1. Collect my profile
 
 Ask me for the following if I have not already provided it:
 - Bachelor's subject and degree title, university and awarding country, completion date or expected graduation, overall grade, and grading scale with the best grade and lowest passing grade.
 - Completed and planned modules and their credits, the credit system, and grades where relevant. Ask for a redacted transcript or a course list. Ask for module descriptions only when needed to establish specific subject credits. Tell me to remove identifiers such as my name, address and student number from records.
-- Target intake and academic year, preferred master's fields or tracks, and countries or regions. Separate preferences from hard filters. Use a bounded list of programs or a defined search scope.
+- Target intake and academic year, preferred master's fields or tracks, and any preferred German states or cities. Search nationwide by default. Separate preferences from hard filters.
 - Tuition budget, currency and period (semester, year or degree), whether the budget is a hard cap, and whether compulsory fees are included. Ask for any applicant fee category and English test, score, date, or exemption that could affect the results.
 
 2. Check official sources one program at a time
 
-Use web search to find leads, then open the official program site and follow the university's links. Read all applicable admissions provisions, including governing ordinances, appendices, amendments, application guides, FAQs and footnotes that affect eligibility. Check effective dates and the target intake. Use the current governing text when an older page or a translation disagrees. Read the original language where needed and report the facts in English. Use narrow page ranges for long PDFs.
+Use this directory of public German institutions as the discovery queue:
+https://raw.githubusercontent.com/akifnu/shortlist-english-masters/main/shortlist-english-masters/assets/german-public-universities.csv
+Open the CSV or ask me to attach it if you cannot retrieve it. Read only a small batch of institutions at a time. Begin with official university catalogs, and cross-check candidate discovery with DAAD International Programmes and Hochschulkompass. Open each candidate's official program site and follow the university's links. Read all applicable admissions provisions, including governing ordinances, appendices, amendments, application guides, FAQs and footnotes that affect eligibility. Check effective dates and the target intake. Use the current governing text when an older page or a translation disagrees. Read the original language where needed and report the facts in English. Use narrow page ranges for long PDFs.
 
 Confirm an entirely English-taught path through compulsory modules, assessments, placements and the thesis. Confirm total and subject-specific credits, required courses and grade thresholds, minimum degree duration or equivalence, language proof and exceptions, and any other mandatory prerequisite. Map my completed modules to exact credit categories without double-counting. Apply only grading and credit conversion rules accepted by the university. Confirm that the intake and deadlines apply to me. Open the actual application route and verify the relevant tuition, semester contributions, and other mandatory fees. Treat ordinary application steps and competitive ranking separately from academic eligibility.
 
@@ -20,7 +22,7 @@ Keep a program out if a required qualification, the English-taught path, a hard 
 
 3. Save progress in small batches
 
-After each batch of about five programs, save a compact checkpoint if file tools are available. Otherwise give me a short copyable checkpoint when needed. Include the search scope, relevant academic facts without personal identifiers, the next candidate to review, decisions, and compact source citations. Keep private working notes separate from the workbook. Resume from the most recent checkpoint if I provide one, and avoid rereading sources that are already verified. Keep going until the agreed scope is covered. If a limit interrupts the search, label the results partial and tell me what remains.
+After each batch of about five programs, save a compact checkpoint if file tools are available. Otherwise give me a short copyable checkpoint when needed. Include the search scope, relevant academic facts without personal identifiers, the last directory batch and any state filter, the next candidate to review, decisions, and compact source citations. Keep private working notes separate from the workbook. Resume from the most recent checkpoint if I provide one, and avoid rereading sources that are already verified. Keep going until the agreed scope is covered. If a limit interrupts the search, label the results partial and tell me what remains.
 
 4. Deliver the workbook
 
