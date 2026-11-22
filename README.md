@@ -13,7 +13,7 @@ Find fully English-taught master's programs you qualify for at public higher edu
 ### Free ChatGPT
 
 1. [Open the starter prompt][starter], copy its text, and paste it into a new ChatGPT chat. You can also save the text file and attach it with the message “Follow the attached instructions and start by asking me for my profile.”
-2. Answer the questions about your bachelor's degree, grades and credits, desired semester and year, fields, any preferred German states or cities, tuition budget, and English-language proof. Paste a list of courses and credits or attach a redacted transcript.
+2. Answer each short question as it comes up. You can also give several details in one reply, or attach a redacted transcript. The workflow uses what you already shared.
 3. Ask ChatGPT to browse the universities' official sites and return a downloadable **Excel (.xlsx)** file. Choose a specific field and intake. Add a German state or city if you want to narrow the search.
 4. If you run into a usage limit, save the latest checkpoint. Paste it along with the starter into a new chat to resume when the required tools are available. If file creation is unavailable, ask for separate copyable tables to put into an Excel workbook.
 
@@ -23,7 +23,7 @@ Web search, uploads, and data analysis are available on Free with usage limits. 
 
 1. [Download the skill ZIP][skill] and keep it zipped.
 2. In ChatGPT, open **Plugins → Skills**, select **Create → Upload from your computer**, and select the ZIP.
-3. Open a new Work chat and use the example request below. Ask for a downloadable **Excel (.xlsx)** workbook and attach a redacted transcript or paste your modules and credits.
+3. Open a new Work chat and use the example request below. The skill asks one short question at a time and presents selectable answers when the interface supports them. You can type your own answer, paste a module list, or attach a redacted transcript when asked.
 
 Skill uploads depend on your plan and workspace settings. If the upload option is unavailable, paste the [starter prompt][starter] into Work and use the same request. [ChatGPT Skills guide][skills-help] · [Creating spreadsheets in Work][work-help]
 
@@ -44,7 +44,7 @@ The ZIP includes the directory and reads it in small batches. For a regular chat
 
 ## Example request
 
-> Use Shortlist English-Taught Masters to find fully English-taught data science master's programs at public universities in Germany for winter 2027/28. My tuition cap is €1,500 per semester, excluding semester contributions. Ask for my grades, modules, credits, and English proof before deciding eligibility. Browse official university sources and give me a downloadable Excel workbook.
+> Use Shortlist English-Taught Masters to find fully English-taught data science master's programs at public universities in Germany for winter 2027/28. My tuition cap is €1,500 per semester, excluding semester contributions. Ask me one short question at a time for any missing details. Browse official university sources and give me a downloadable Excel workbook.
 
 Share course names, credits, grades and, when needed, module descriptions. Remove your name, student number, address, and document identifiers from any transcript you share.
 

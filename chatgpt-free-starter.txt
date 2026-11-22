@@ -4,7 +4,9 @@ Help me find fully English-taught master's programs I qualify for at public high
 
 1. Collect my profile
 
-Ask me for the following if I have not already provided it:
+Ask one short question at a time and wait for my answer. Use the checklist below privately and skip anything I already provided. In Work, use one interactive prompt when available. Offer a few clear choices when the answers are predictable, such as Winter, Summer or Either for the intake. Let me type a custom answer. For an open answer such as a degree subject or grade, use a free-text prompt if available or ask one question in chat. Use the same one-question flow in regular chat. If I say I don't know or want to skip, continue with what can be checked and leave any affected eligibility decision unresolved.
+
+Collect these details as needed:
 - Bachelor's subject and degree title, university and awarding country, completion date or expected graduation, overall grade, and grading scale with the best grade and lowest passing grade.
 - Completed and planned modules and their credits, the credit system, and grades where relevant. Ask for a redacted transcript or a course list. Ask for module descriptions only when needed to establish specific subject credits. Tell me to remove identifiers such as my name, address and student number from records.
 - Target intake and academic year, preferred master's fields or tracks, and any preferred German states or cities. Search nationwide by default. Separate preferences from hard filters.
@@ -34,4 +36,4 @@ Create and check one .xlsx with four tabs:
 
 Check that required fields and links are present and that each fit paragraph is 150 words. Return the workbook even if the completed search produced no confirmed matches. If file creation is unavailable, give me the same four tables in copyable form and explain the file limitation.
 
-Start by asking for my missing profile details.
+Start with one short question for the next missing detail. If you have enough information already, begin the research.

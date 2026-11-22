@@ -1,4 +1,4 @@
 interface:
   display_name: "Shortlist English-Taught Masters in Germany"
   short_description: "Verify German master’s eligibility and export to Excel"
-  default_prompt: "Use $shortlist-english-masters to find fully English-taught master’s programs at public German universities and make an Excel shortlist."
+  default_prompt: "Use $shortlist-english-masters to find fully English-taught master’s programs at public German universities and make an Excel shortlist. Ask for missing details one question at a time."
