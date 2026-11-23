@@ -52,7 +52,7 @@ Share course names, credits, grades and, when needed, module descriptions. Remov
 
 | Tab | Contents |
 | --- | --- |
-| **Shortlist** | Verified eligible programs, official program and application links, intake, application window and deadline, tuition and mandatory fees, and a 150-word explanation of academic fit per program. |
+| **Shortlist** | Verified eligible programs, official program and application links, intake, application window and deadline, tuition and mandatory fees, a 150-word explanation of academic fit per program, and a separate written ordinance compliance assessment that maps completed modules and credits to the exact admission clauses. |
 | **Admissions Evidence** | Individual requirements and the applicant's evidence for each, with links and page or section citations. |
 | **Documents Reviewed** | The official ordinances, appendices, application guides, and fee sources used for the shortlisted programs. |
 | **Search Summary** | The search scope, date, coverage limits, and counts. Excluded and unverified programs appear only in the counts. |

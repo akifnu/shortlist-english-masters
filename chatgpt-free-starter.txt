@@ -30,10 +30,11 @@ After each batch of about five programs, save a compact checkpoint if file tools
 
 Create and check one .xlsx with four tabs:
 - Shortlist: only verified eligible programs. Include university, master's program or track, campus and country, intake semester and year, application window and deadline, tuition, semester contribution, other mandatory fees, official program and application links, official admissions rules, any key application steps, and exactly 150 words describing how my studies align with the program's curriculum.
+- In every Shortlist row, include a separate written Ordinance compliance assessment. Identify the controlling ordinance or amendment for my intake. Cite the sections, paragraphs or annexes in the prose. Compare my grade, total credits, language proof and other applicable qualifications with the published thresholds. Name the completed modules and ECTS used to meet each subject-credit minimum. Explain any applicable exception and any remaining university selection or verification step.
 - Admissions Evidence: one row per relevant eligibility rule or key fact, my evidence or the verified finding, and the official source link and section or page. Cite the curriculum used for the fit description.
 - Documents Reviewed: official links, applicable versions, and sections or page ranges read for the shortlisted programs.
 - Search Summary: research date, geographic and program scope, coverage limits, whether the search is complete, and counts for all outcomes. Omit excluded and unverified program names throughout the workbook.
 
-Check that required fields and links are present and that each fit paragraph is 150 words. Return the workbook even if the completed search produced no confirmed matches. If file creation is unavailable, give me the same four tables in copyable form and explain the file limitation.
+Check that required fields and links are present that each fit paragraph is 150 words, and that each shortlisted program has a written, clause-specific compliance assessment. Return the workbook even if the completed search produced no confirmed matches. If file creation is unavailable, give me the same four tables in copyable form and explain the file limitation.
 
 Start with one short question for the next missing detail. If you have enough information already, begin the research.
