@@ -18,6 +18,7 @@ REPORT_TYPES = (
     "semester_fee", "other_fees", "curriculum",
 )
 RESULTS = ("met", "verified", "procedural", "not_applicable")
+OPTIONAL_PROGRAM_FIELDS = ("extra_application_url", "city_fit")
 PROGRAM_COLUMNS = (
     ("university", "University", 29),
     ("program", "Master's program / track", 39),
@@ -37,6 +38,7 @@ PROGRAM_COLUMNS = (
     ("application_notes", "Application and selection notes", 51),
     ("fit", "Academic fit (150 words)", 85),
     ("ordinance_compliance", "Ordinance compliance assessment", 95),
+    ("city_fit", "City fit", 65),
 )
 
 LINK_LABELS = {
@@ -72,6 +74,9 @@ def check_url(obj, key):
 def read_run(directory):
     run = read_object(directory / "run.json")
     required_text(run, ("scope", "coverage", "checked_on"))
+    for key in ("city_preferences", "applicant_evidence_gaps"):
+        if key in run:
+            required_text(run, (key,))
     if date.fromisoformat(run["checked_on"]).isoformat() != run["checked_on"]:
         raise ValueError("checked_on: expected YYYY-MM-DD")
     for key in ("complete", "allow_closed"):
@@ -95,8 +100,13 @@ def read_programs(directory):
         yield path.stem, record
 
 
-def validate_program(record, allow_closed):
-    required_text(record, [key for key, _, _ in PROGRAM_COLUMNS if key != "extra_application_url"])
+def validate_program(record, allow_closed, rank_cities=False):
+    required_text(record, [key for key, _, _ in PROGRAM_COLUMNS if key not in OPTIONAL_PROGRAM_FIELDS])
+    if rank_cities or "city_rank" in record or "city_fit" in record:
+        required_text(record, ("city_fit",))
+        rank = record.get("city_rank")
+        if type(rank) is not int or rank < 1:
+            raise ValueError("city_rank: expected a positive integer")
     if record["country"].strip().casefold() != "germany":
         raise ValueError("country: the shortlist covers Germany")
     for key in ("program_url", "application_url", "admissions_url"):
@@ -136,8 +146,10 @@ def validate_program(record, allow_closed):
         required_text(row, ("type", "requirement", "assessment", "result", "source_title", "locator"))
         check_url(row, "source_url")
         kind, result = row["type"], row["result"]
-        if kind not in ELIGIBILITY_TYPES + REPORT_TYPES + ("other",) or result not in RESULTS:
+        if kind not in ELIGIBILITY_TYPES + REPORT_TYPES + ("other", "city") or result not in RESULTS:
             raise ValueError(f"evidence: unknown type or result ({kind}, {result})")
+        if kind == "city" and result != "verified":
+            raise ValueError("evidence: city facts require a verified result")
         if row["source_url"] not in document_urls:
             raise ValueError(f"evidence: {kind} has no matching reviewed document")
         if kind == "degree" and result == "met":
@@ -215,7 +227,7 @@ def export(directory, output):
         if record["status"] != "qualified":
             continue
         try:
-            validate_program(record, run["allow_closed"])
+            validate_program(record, run["allow_closed"], rank_cities="city_preferences" in run)
             identity = tuple(" ".join(record[field].casefold().split())
                              for field in ("university", "program", "country", "city", "intake"))
             if identity in identities:
@@ -248,8 +260,10 @@ def export(directory, output):
     ])
     setup_sheet(summary, [("Item", 30), ("Value", 100)])
 
-    ordered = sorted(qualified, key=lambda record: (record["university"].casefold(),
-                                                    record["program"].casefold(), record["intake"]))
+    ordered = sorted(qualified, key=lambda record: (
+        record.get("city_rank", math.inf), record["university"].casefold(),
+        record["program"].casefold(), record["intake"],
+    ))
     for record in ordered:
         values = []
         links = {}
@@ -280,6 +294,12 @@ def export(directory, output):
         ("Unverified", counts["unverified"]), ("Pending", counts["pending"]),
     ):
         add_row(summary, [label, value])
+    for key, label in (
+        ("city_preferences", "City preferences"),
+        ("applicant_evidence_gaps", "Missing applicant evidence"),
+    ):
+        if key in run:
+            add_row(summary, [label, run[key]])
     for sheet in (shortlist, evidence, documents):
         sheet.auto_filter.ref = sheet.dimensions
 

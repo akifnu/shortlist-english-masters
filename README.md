@@ -1,6 +1,6 @@
 # Shortlist English-Taught Masters in Germany
 
-Find fully English-taught master's programs you qualify for at public higher education institutions in Germany. The workflow checks your transcript against official admissions rules, including course prerequisites and minimum credits, and turns verified matches into a cited Excel workbook.
+Find fully English-taught master's programs you qualify for at public higher education institutions in Germany. The workflow checks the academic information you have against official admissions rules, including course prerequisites and minimum credits, and turns verified matches into a cited Excel workbook.
 
 ## Choose your setup
 
@@ -46,16 +46,18 @@ The ZIP includes the directory and reads it in small batches. For a regular chat
 
 > Use Shortlist English-Taught Masters to find fully English-taught data science master's programs at public universities in Germany for winter 2027/28. My tuition cap is €1,500 per semester, excluding semester contributions. Ask me one short question at a time for any missing details. Browse official university sources and give me a downloadable Excel workbook.
 
-Share course names, credits, grades and, when needed, module descriptions. Remove your name, student number, address, and document identifiers from any transcript you share.
+Share any course names, credits, grades, or descriptions you have. A partial list is enough to start. A transcript or course handbook is optional for the search. Remove your name, student number, address, and document identifiers from any files you share.
+
+You can also say what kind of city you prefer. For example, prioritize a mild climate, jobs or internships in your field, access to nature, a smaller city, or lower living costs. Say which factors matter most and mark any must-haves explicitly.
 
 ## What the workbook includes
 
 | Tab | Contents |
 | --- | --- |
-| **Shortlist** | Verified eligible programs, official program and application links, intake, application window and deadline, tuition and mandatory fees, a 150-word explanation of academic fit per program, and a separate written ordinance compliance assessment that maps completed modules and credits to the exact admission clauses. |
-| **Admissions Evidence** | Individual requirements and the applicant's evidence for each, with links and page or section citations. |
+| **Shortlist** | Verified eligible programs, official program and application links, intake, application window and deadline, tuition and mandatory fees, a 150-word explanation of academic fit per program, and a separate written ordinance compliance assessment that maps completed modules and credits to the exact admission clauses. Share city preferences to get a ranked shortlist and a city fit note for each campus. |
+| **Admissions Evidence** | Individual requirements and the applicant's evidence for each, with links and page or section citations. Includes cited city facts when relevant. |
 | **Documents Reviewed** | The official ordinances, appendices, application guides, and fee sources used for the shortlisted programs. |
-| **Search Summary** | The search scope, date, coverage limits, and counts. Excluded and unverified programs appear only in the counts. |
+| **Search Summary** | The search scope, date, coverage limits, and counts, plus city preferences and missing academic facts when applicable. Excluded and unverified programs are summarized anonymously. |
 
 The installed skill saves progress after reviewing each source. If the chat or session must end, retain the latest checkpoint so you can resume without repeating completed reviews.
 
